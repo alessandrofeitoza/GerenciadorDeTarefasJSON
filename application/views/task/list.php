@@ -37,7 +37,8 @@
                 echo '<tr>';
                   echo '<th>Titulo</th>';
                   echo '<th>Descrição</th>';
-                  echo '<th>Criada em</th>';
+                  echo '<th>Criou em</th>';
+                  echo '<th>Completou em</th>';
                   echo '<th>Status</th>';
                   echo '<th>Opções</th>';
                 echo '</tr>';
@@ -48,6 +49,7 @@
                     echo '<td>',$eachTask->title,'</td>';
                     echo '<td>',$eachTask->desc,'</td>';
                     echo '<td>',$eachTask->created_in,'</td>';
+                    echo '<td>',$eachTask->completed_in,'</td>';
                     echo '<td>';
                       echo ($eachTask->status == "")?'<span class="label label-default">Aguardando<span>':'<span class="label label-success">Concluída<span>';
                     echo '</td>';

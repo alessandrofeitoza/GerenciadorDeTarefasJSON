@@ -2,13 +2,15 @@
     {
         "title": "Dominar o Mundo",
         "desc": "Programando em PHP e comendo Rapadura",
-        "status": "1",
-        "created_in": "29\/12\/2016 15:14:40"
+        "status": "",
+        "created_in": "29\/12\/2016 15:14:40",
+        "completed_in": null
     },
     {
         "title": "Viajar",
         "desc": "bla bla bla bla bla bla bla",
+        "status": "1",
         "created_in": "29\/12\/2016 15:15:12",
-        "status": ""
+        "completed_in": "10\/01\/2017 18:54:03"
     }
 ]
