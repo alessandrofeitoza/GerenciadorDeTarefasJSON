@@ -2,6 +2,10 @@
 
 <script>
   $( document ).ready(function() {
+    //datatables
+    $('#table_tasks').DataTable();
+
+
     $('[data-placement="top"]').tooltip();
 
     $('[data-target="#deleteTask"]').on("click", function(){
@@ -13,15 +17,18 @@
     $('[data-target="#reopenTask"]').on("click", function(){
       $('#confirmReopenTask').attr('href','reabrir/'+$(this).val());
     });
-  });
-</script>
+    });
+  </script>
 
+  <link rel="stylesheet" href="<?php echo base_url('assets/datatables/css/datatables.bootstrap.min.css'); ?>">
+  <script src="<?php echo base_url('assets/datatables/js/jquery.datatables.min.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/datatables/js/datatables.bootstrap.min.js'); ?>"></script>
 
 <div class="row">
-  <div class="col-lg-10 col-lg-offset-1">
+  <div class="col-lg-12">
     <div class="container">
       <br>
-      <div class="card">
+      <div class="card" style="padding: 5px;">
         <h1 class="title">Vamos dominar o mundo hoje?</h1>
         <a href="#addTask" class="btn btn-default" data-toggle="modal"><span class="fa fa-plus-circle"></span> Nova Tarefa</a>
         <br><br>
@@ -32,7 +39,7 @@
             echo '<a href="#addTask" data-toggle="modal" class="alert-link">Criar Nova</a>';
             echo '</div>';
           }else{
-            echo '<table class="table table-hover">';
+            echo '<table class="table table-hover table-striped " id="table_tasks">';
               echo '<thead>';
                 echo '<tr>';
                   echo '<th>Titulo</th>';
@@ -154,6 +161,33 @@
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="myModalLabel">Reabrir Tarefa</h4>
+      </div>
+      <div class="modal-body">
+        <div class="alert alert-info">
+          <strong>Você deseja reabrir esta tarefa?
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="row">
+          <div class="col-lg-6">
+            <a href="" id="confirmReopenTask" class="btn btn-block btn-lg btn-primary">Sim</a>
+          </div>
+          <div class="col-lg-6">
+            <button type="button" class="btn btn-block btn-lg btn-default" data-dismiss="modal">Não</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Detalhes -->
+<div class="modal fade" id="reopenTask" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Detalhes da Tarefa</h4>
       </div>
       <div class="modal-body">
         <div class="alert alert-info">
