@@ -29,6 +29,7 @@ class Task extends CI_Controller{
     $task->created_in = date('d/m/Y H:i:s');
     $task->completed_in = "";
     $task->status = "";
+    $task->priority = html_escape($this->input->post('priority'));
 
     $this->TaskModel->insert($task, $user->email);
 
@@ -74,6 +75,7 @@ class Task extends CI_Controller{
     $newData = new stdClass();
     $newData->title = html_escape($this->input->post('title'));
     $newData->desc = html_escape($this->input->post('desc'));
+    $newData->priority = html_escape($this->input->post('priority'));
     $newData->status = $task->status;
     $newData->created_in = $task->created_in;
     $newData->completed_in = $task->completed_in;
@@ -122,6 +124,7 @@ class Task extends CI_Controller{
     $newData->status = "1";
     $newData->created_in = $task->created_in;
     $newData->completed_in = date('d/m/Y H:i:s');
+    $newData->priority = $task->priority;
 
     $this->TaskModel->updateById($user->email, $id, $newData);
 
@@ -148,6 +151,7 @@ class Task extends CI_Controller{
     $newData->status = "";
     $newData->created_in = $task->created_in;
     $newData->completed_in = $task->completed_in;
+    $newData->priority = $task->priority;
 
     $this->TaskModel->updateById($user->email, $id, $newData);
 

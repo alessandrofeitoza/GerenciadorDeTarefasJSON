@@ -19,6 +19,15 @@
             <div class="bar"></div>
           </div>
 
+          <div class="input-container">
+            <label style="color: #9d9d9d; font-size: 18px; margin-top:-30px;">Prioridade</label><br>
+            <select id="priority" name="priority" required class="form-control input-lg">
+              <option>Baixa</option>
+              <option selected>Normal</option>
+              <option>Alta</option>
+            </select>
+          </div>
+
           <div class="button-container">
             <button><span>Atualizar</span></button>
           </div>

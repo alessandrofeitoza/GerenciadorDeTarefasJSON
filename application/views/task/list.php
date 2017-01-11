@@ -43,7 +43,7 @@
               echo '<thead>';
                 echo '<tr>';
                   echo '<th>Titulo</th>';
-                  echo '<th>Descrição</th>';
+                  echo '<th>Prioridade</th>';
                   echo '<th>Criou em</th>';
                   echo '<th>Completou em</th>';
                   echo '<th>Status</th>';
@@ -54,7 +54,7 @@
                 foreach($tasks as $id=>$eachTask){
                   echo '<tr>';
                     echo '<td>',$eachTask->title,'</td>';
-                    echo '<td>',$eachTask->desc,'</td>';
+                    echo '<td><span class="label label-',priority_task($eachTask->priority),'">',$eachTask->priority,'</span></td>';
                     echo '<td>',$eachTask->created_in,'</td>';
                     echo '<td>',$eachTask->completed_in,'</td>';
                     echo '<td>';

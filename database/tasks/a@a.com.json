@@ -23,16 +23,18 @@
     {
         "title": "A comunidade de Desenvolvedores",
         "desc": "a",
+        "priority": "Alta",
+        "status": "",
         "created_in": "10\/01\/2017 19:32:37",
-        "completed_in": "",
-        "status": ""
+        "completed_in": ""
     },
     {
         "title": "a",
         "desc": "a",
+        "priority": "Normal",
+        "status": "1",
         "created_in": "10\/01\/2017 19:32:41",
-        "completed_in": "",
-        "status": ""
+        "completed_in": "11\/01\/2017 01:01:24"
     },
     {
         "title": "zfc",
@@ -58,9 +60,10 @@
     {
         "title": "asda",
         "desc": "asdasd",
+        "priority": "Baixa",
+        "status": "",
         "created_in": "10\/01\/2017 19:32:56",
-        "completed_in": "",
-        "status": ""
+        "completed_in": ""
     },
     {
         "title": "asda",
