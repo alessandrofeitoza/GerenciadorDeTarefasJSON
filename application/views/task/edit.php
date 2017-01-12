@@ -22,8 +22,9 @@
           <div class="input-container">
             <label style="color: #9d9d9d; font-size: 18px; margin-top:-30px;">Prioridade</label><br>
             <select id="priority" name="priority" required class="form-control input-lg">
+              <?php echo '<option selected>',$task->priority,'</option>'; ?>
               <option>Baixa</option>
-              <option selected>Normal</option>
+              <option>Normal</option>
               <option>Alta</option>
             </select>
           </div>
